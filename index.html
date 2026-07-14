@@ -1,1 +1,85 @@
-<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Spice Aura</title><link rel='stylesheet' href='style.css'></head><body><header><h1>🍽️ Spice Aura</h1><p>Authentic Indian Cuisine</p></header><input id='search' placeholder='Search menu...' onkeyup='filterMenu()'><div id='menu'><div class='card'>Paneer Tikka - ₹249</div><div class='card'>Butter Chicken - ₹320</div><div class='card'>Chicken Dum Biryani - ₹299</div><div class='card'>Veg Biryani - ₹239</div><div class='card'>Gulab Jamun - ₹90</div></div><script src='script.js'></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spice Aura | Authentic Indian Cuisine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>🍽️ Spice Aura</h1>
+    <p class="tagline">Authentic Indian Cuisine</p>
+  </header>
+
+  <div class="search-wrapper">
+    <input type="text" id="searchInput" placeholder="Search menu..." onkeyup="filterMenu()">
+  </div>
+
+  <nav class="category-tabs" id="categoryTabs">
+    <button class="tab-btn active" onclick="filterCategory('all', this)">All</button>
+    <button class="tab-btn" onclick="filterCategory('starters', this)">Starters</button>
+    <button class="tab-btn" onclick="filterCategory('main', this)">Main Course</button>
+    <button class="tab-btn" onclick="filterCategory('biryani', this)">Biryani</button>
+    <button class="tab-btn" onclick="filterCategory('dessert', this)">Desserts</button>
+  </nav>
+
+  <main class="menu-grid" id="menuGrid">
+
+    <div class="card" data-category="starters" data-name="paneer tikka">
+      <img src="images/paneer-tikka.jpg.jpg" alt="Paneer Tikka">
+      <div class="card-body">
+        <h3>Paneer Tikka</h3>
+        <p class="desc">Chargrilled cottage cheese marinated in spiced yogurt</p>
+        <span class="price">₹249</span>
+      </div>
+    </div>
+
+    <div class="card" data-category="main" data-name="butter chicken">
+      <img src="images/butter-chicken.jpg.jpg" alt="Butter Chicken">
+      <div class="card-body">
+        <h3>Butter Chicken</h3>
+        <p class="desc">Tandoori chicken simmered in creamy tomato gravy</p>
+        <span class="price">₹320</span>
+      </div>
+    </div>
+
+    <div class="card" data-category="biryani" data-name="chicken dum biryani">
+      <img src="images/chicken-biryani.jpg.jpg" alt="Chicken Dum Biryani">
+      <div class="card-body">
+        <h3>Chicken Dum Biryani</h3>
+        <p class="desc">Slow-cooked basmati rice layered with spiced chicken</p>
+        <span class="price">₹299</span>
+      </div>
+    </div>
+
+    <div class="card" data-category="biryani" data-name="veg biryani">
+      <img src="images/masala-dosa.jpg.jpg" alt="Veg Biryani">
+      <div class="card-body">
+        <h3>Veg Biryani</h3>
+        <p class="desc">Fragrant basmati rice cooked with mixed vegetables</p>
+        <span class="price">₹239</span>
+      </div>
+    </div>
+
+    <div class="card" data-category="dessert" data-name="gulab jamun">
+      <img src="images/gulab-jamun.jpg.jpg" alt="Gulab Jamun">
+      <div class="card-body">
+        <h3>Gulab Jamun</h3>
+        <p class="desc">Soft milk dumplings soaked in rose-cardamom syrup</p>
+        <span class="price">₹90</span>
+      </div>
+    </div>
+
+  </main>
+
+  <p class="no-results" id="noResults" style="display:none;">No dishes found 🍛</p>
+
+  <footer class="site-footer">
+    <p>© 2026 Spice Aura Restaurant. Scan. Order. Enjoy.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
